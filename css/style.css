@@ -1,0 +1,727 @@
+:root {
+    --background-color: #181818;
+    --second-background-color: #a460f9;
+    --text-color: #f2f2f2;
+    --second-text-color: #252525;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+textarea {
+    color: var(--text-color);
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--second-text-color);
+}
+
+span {
+    line-height: 0.7;
+    letter-spacing: 1.5;
+    font-weight: 400;
+    font-family: "Krub", sans-serif;
+    color: var(--second-background-color);
+}
+
+i,
+p {
+    color: var(--text-color);
+    font-family: "Oswald", sans-serif;
+}
+
+a {
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul,
+li {
+
+    color: var(--text-color);
+    font-family: "Oswald", sans-serif;
+    list-style-type: none;
+}
+
+.common-button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--second-background-color);
+    width: 100px;
+}
+
+/* navbar section */
+nav {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.nav-item .active::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    color: var(--text-color);
+}
+.navbar-nav .nav-link {
+    color: var(--text-color);
+}
+.navbar-nav .nav-link.active {
+    color: var(--text-color);
+}
+
+.nav-link:hover,
+.nav-link:visited {
+    color: var(--text-color);
+}
+
+.navbar-toggler {
+    background-color: var(--text-color);
+    color: var(--text-color);
+}
+
+/* navbar section  end */
+
+/* home section */
+/* home slider arrow */
+.home-slick-slider .slick-prev{
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    z-index: 1; 
+}
+.home-slick-slider .slick-prev::before{
+    position: absolute;
+    bottom: 0;
+        left: 10px;
+        font-size: 30px;
+        color: var(--text-color);
+}
+.home-slick-slider .slick-next{
+    position: absolute;
+    right: 40px;
+    top: 47%;
+}
+.home-slick-slider .slick-next::before{
+    position: absolute;
+        right: 10px;
+        font-size: 30px;
+        color: var(--text-color);
+}
+/* .home-slider::after {
+    content: url(../image/beginner-text.png);
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+} */
+
+.home-slider .heading {
+    margin-left: 50px;
+}
+
+.home-slider .heading-box {
+    position: absolute;
+    border: 2px solid var(--text-color);
+    width: 150px;
+    padding: 10px;
+    top: 15%;
+    right: 0;
+}
+.home-slider .ui-img img{
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.heading-box span {
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+/* home section end*/
+
+/* review section start*/
+.review h5 {
+    font-size: 15px;
+}
+
+/* review section end*/
+
+/* challenge section start */
+.challenge {
+    background: url(../image/challenge-oral.png) no-repeat;
+    background-size: auto;
+    background-position: center;
+    padding: 70px;
+}
+
+.challenge h1 {
+    font-size: 80px;
+}
+
+.challenge .left-text {
+    position: absolute;
+    top: 20%;
+    left: -1%;
+    transform: rotate(-90deg);
+}
+
+.challenge .right-text {
+    position: absolute;
+    top: 25%;
+    right: -1%;
+    transform: rotate(90deg);
+}
+
+/* challenge section end */
+
+/* course section start */
+.course h1 {
+    font-size: 65px;
+}
+
+.course span {
+    font-size: 25px;
+}
+
+.course .row {
+    flex-wrap: nowrap;
+}
+
+.course-detail {
+    border: 2px solid var(--text-color);
+}
+
+.course-detail .course-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+    color: black;
+    width: 50px;
+    background-color: var(--text-color);
+}
+
+.course-detail h2::before {
+    position: absolute;
+    content: "";
+    left: 35%;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--second-background-color);
+}
+
+.course-detail span {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.course-detail p {
+    text-align: justify;
+}
+
+/* course section end */
+
+/* about section start */
+.about::after {
+    position: absolute;
+    content: url(../image/about-theme.png);
+    top: -5%;
+    left: 0;
+}
+
+.about li {
+    padding: 20px 0px;
+}
+
+.about li::marker {
+    color: var(--second-background-color);
+    font-size: 20px;
+}
+
+.about-detail {
+    padding-left: 70px;
+}
+
+/* about section end */
+
+/* us section start */
+.us-section::before {
+    position: absolute;
+    content: url(../image/us-theme.png);
+    top: -10%;
+    right: 0;
+}
+
+.us-section::after {
+    position: absolute;
+    content: url(../image/explore-text.png);
+    top: 30%;
+    right: 1%;
+}
+/* user slider arrow */
+.user-slider .slick-prev{
+    position: absolute;
+    left:0; 
+    z-index: 1;  
+}
+.user-slider .slick-prev::before{
+    font-size: 30px;
+    color: var(--text-color);
+}
+.user-slider .slick-next{
+    position: absolute;
+    right: 1%;   
+}
+.user-slider .slick-next::before{
+    font-size: 30px;
+    color: var(--text-color);
+}
+/* us section end */
+
+/* play section start */
+.play-section::before {
+    position: absolute;
+    content: url(../image/play-text.png);
+    top: 40%;
+    left: -5%;
+}
+
+.play-section::after {
+    position: absolute;
+    transform: rotate(180deg);
+    content: url(../image/play-text.png);
+    top: 40%;
+    right: -5%;
+}
+
+/* play section end */
+
+/* user section start */
+.user-row{
+    flex-wrap: nowrap;
+}
+.user-section h1 {
+    font-size: 55px;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.user-section p {
+    font-weight: 300;
+    color: var(--second-background-color);
+    font-size: 30px;
+}
+
+.user-detail i {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--second-background-color);
+}
+.user-detail img{
+    display: block;
+    margin: auto;
+}
+.user-detail p {
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.user-detail span {
+    display: inline-block;
+    font-size: 30px;
+}
+
+/* user section end */
+
+/* form section start */
+.form-section {
+    background-color: transparent;
+    background: url(../image/form-background.png) no-repeat;
+    background-size: cover;
+}
+
+.form-section span {
+    font-size: 30px;
+}
+
+.form-section p {
+    font-size: 15px;
+}
+
+.form-section input {
+    outline: none;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid var(--second-background-color);
+    background: transparent;
+    margin: 20px;
+}
+
+.form-section textarea {
+    outline: none;
+    width: 400px;
+    padding: 10px;
+    border: 2px solid var(--second-background-color);
+    background: transparent;
+    margin: 20px;
+}
+
+.form-button {
+    border: none;
+    outline: none;
+    background-color: var(--second-background-color);
+    padding: 10px;
+    font-size: 10px;
+}
+
+/* form section end */
+
+/* footer section start */
+footer {
+    padding: 50px 0px;
+    background-color: var(--second-background-color);
+}
+
+footer .common-heading::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -30%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+footer p {
+    margin: 0px;
+    font-weight: 300;
+}
+
+footer input {
+    outline: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid var(--text-color);
+    background: transparent;
+    margin: 20px 0px;
+}
+
+footer .footer-detail {
+    text-align: right;
+}
+
+.social-media img {
+    width: 40px;
+    margin: 10px;
+}
+
+/* footer section end */
+
+/* media query start*/
+
+@media only screen and (max-width: 1280px) {
+
+    /* play section start */
+    .play-section::before {
+        display: none;
+    }
+
+    .play-section::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* challange section */
+    .challenge {
+        padding: 50px;
+    }
+
+    .challenge .left-text {
+        left: -5%;
+    }
+
+    .challenge .right-text {
+        right: -5%;
+    }
+
+    /* course section */
+    .course .row {
+        flex-wrap: wrap;
+    }
+
+    .course-detail h2::before {
+        left: 45%;
+    }
+
+    /* play section end */
+
+    /* form section start */
+    .form-section input,
+    textarea {
+        width: 300px;
+    }
+
+    .form-section textarea {
+        width: 300px;
+    }
+
+    /* form section end */
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* home section start */
+    .home-slider .heading-box {
+        top: 10%;
+
+    }
+
+    .home-slider .headphone-men img {
+        display: block;
+        margin: auto;
+    }
+
+    .home-slider::after {
+        left: 4%;
+    }
+
+    .heading-detail {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .heading-detail h5 {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .heading-detail p {
+        font-size: 20px;
+    }
+
+    /* challange section */
+    .challenge {
+        background-size: contain;
+        padding: 25px;
+    }
+
+    .challenge h1 {
+        font-size: 60px;
+    }
+
+    .challenge .left-text {
+        left: -5%;
+    }
+
+    .challenge .right-text {
+        right: -5%;
+    }
+
+    /* course section start */
+    .course .row {
+        flex-wrap: wrap;
+    }
+
+    .course-detail .course-number {
+        font-size: 20px;
+        padding: 10px;
+        width: 50px;
+    }
+
+    /* about section start */
+    .about::after {
+        top: -10%;
+        left: -10%;
+    }
+
+    .about-img img {
+        display: block;
+        margin: auto;
+    }
+
+    .about-detail {
+        order: 1;
+        padding-left: 50px;
+    }
+
+    /* us section start */
+    .us-section::after {
+        display: none;
+    }
+
+    .us-section::before {
+        display: none;
+    }
+
+    .us-men-img img {
+        display: block;
+        margin: auto;
+    }
+
+    .us-detail {
+        text-align: center;
+    }
+
+    /* play section start */
+    .play-section::before {
+        display: none;
+    }
+
+    .play-section::after {
+        display: none;
+    }
+
+    /* form section start */
+    .form-section input {
+        width: 330px;
+    }
+
+    .form-section textarea {
+        width: 330px;
+    }
+
+    /* footer section start */
+    footer .footer-detail {
+        padding-top: 20px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* home section */
+    .home-slider::after {
+        content: url(../image/beginner-text.png);
+        position: absolute;
+        bottom: 30%;
+        left: 2%;
+    }
+
+    .home-slider .common-button {
+        padding: 5px;
+    }
+
+    /* challange section start */
+    .challenge h1 {
+        font-size: 40px;
+    }
+
+    .challenge .left-text,
+    .right-text {
+        display: none;
+    }
+
+    /* course section start */
+    .course h1 {
+        font-size: 25px;
+    }
+
+    .course h1 span {
+        font-size: 18px;
+    }
+
+    /* about section start */
+    .about-detail {
+        padding-left: 15px;
+    }
+
+    .about::after {
+        display: none;
+    }
+
+    /* us section start */
+    .us-section::after {
+        display: none;
+    }
+
+    /* form section start */
+
+    .form-section input {
+        width: 270px;
+        margin: 10px;
+    }
+
+    .form-section textarea {
+        width: 270px;
+        margin: 10px;
+    }
+
+    /* footer section start */
+    footer input {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    /* home section */
+    .home-slider .headphone-men img {
+        width: 250px;
+        height: 400px;
+    }
+
+    .home-slider .heading {
+        margin-left: 0px;
+    }
+
+    /* challange section start */
+    .challenge {
+        background-position: top;
+        padding: 10px;
+    }
+
+    .challenge h1 {
+        font-size: 35px;
+    }
+
+    /* course section start */
+    .course h1 {
+        font-size: 25px;
+    }
+
+    .course h1 span {
+        font-size: 15px;
+    }
+
+    /* form section start */
+
+    .form-section input {
+        width: 200px;
+    }
+
+    .form-section textarea {
+        width: 200px;
+    }
+}
